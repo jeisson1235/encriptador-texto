@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <nav class="header_menu">
+            <a href="index.html"><img class="header_menu__logo" src="./assets/logo_b.png" alt="Logo de Alura"></a>
+        </nav>
+    </header>
+
+    <main class="seccion">
+        <h1 class="contenido_titulo">Encriptador de Texto</h1>
+
+        <section class="seccion_contenido">
+            <div class="seccion_contenido__principal">
+                <div class="seccion_contenido_frame_principal">
+                    <textarea class="contenido_entrada" id="inputTexto" name="inputTexto"
+                        placeholder="Ingrese el texto aquí" aria-label="Ingrese el texto aquí" required></textarea>
+                    <h5 class="contenido_aviso">
+                        <img class="contenido_signo" src="./assets/bi_exclamation-circle-fill.png"
+                            alt="signo de exclamación">
+                        Solo letras minúsculas y sin acentos
+                    </h5>
+                </div>
+
+                <div class="seccion_contenido__botones">
+                    <button class="contenido_btn btn-primario" type="button" id="encriptarBtn"
+                        onclick="encriptarTxt()">Encriptar</button>
+                    <button class="contenido_btn btn-secundario" type="button" id="desencriptarBtn"
+                        onclick="desencriptarTxt()">Desencriptar</button>
+                    <button class="contenido_btn btn-tercero" type="button" id="limpiarBtn"
+                        onclick="limpiarTxt()">Limpiar</button>
+                </div>
+            </div>
+
+            <div class="seccion_contenido__secundario">
+                <div class="contenido_blanco">
+                    <div class="seccion_contenido_frame__secundario">
+                        <div class="contenido__ocultar" id="contenido__ocultar">
+                            <img class="contenido_imagen" src="./assets/munieco.png" alt="Muñeco de fondo">
+                            <div class="contenido_mensaje">
+                                <h2 class="contenido_subtitulo">Ningún mensaje fue encontrado</h2>
+                                <p class="contenido_parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                            </div>
+                        </div>
+                        <div class="contenido__mostrar hidden" id="contenido__mostrar">
+                            <textarea class="contenido_salida" id="resultado" name="resultado" aria-label="Resultado"
+                                readonly></textarea>
+                            <button class="contenido_btn btn-cuarto" type="button" id="copiarBtn"
+                                onclick="copiarTxt()">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_condiciones">
+            <p>&copy;Desarrollado por Jeisson Fernandez.</p>
+            <p>Todos los derechos reservados.</p>
+            <a style="color: white;" href="#">2024</a>
+        </div>
+    </footer>
+
+    <script src="./js/app.js" defer></script>
+</body>
+</html>
